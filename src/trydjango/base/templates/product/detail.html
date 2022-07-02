@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %} <!-- Abrindo o bloco !-->
+
+<h1>{{ object.title }} </h1> <!-- Titulo da pagina !-->
+<p> <!-- Abrindo parágrafo !-->
+    {% if object.description != None and description != '' %} <!-- inicio da condicional !-->
+        {{ object.description }} {{ object.price }} <!-- Caso seja verdadeiro mostrará a descrição e o preço!-->
+    {% else %}  <!-- condicional caso seja falso!-->
+        Description Coming Soon  <!-- Caso seja falso mostrará que a descrição virá em breve!-->
+    {% endif %} <!-- fim da condicional !-->
+</p> <!-- Fechando parágrafo !-->
+
+{% endblock %} <!-- fim do bloco! !-->
